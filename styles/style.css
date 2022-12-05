@@ -15,21 +15,12 @@
   min-height: 600px;
   max-height: 756px;
   position: relative;
-
-  /* выше установили ограничения для секции */
 }
-
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
-  background-color: #2f80ed;
-  position: absolute;
-  right: 0;
-  top: 64px;
-  z-index: 1;
+.header__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 .header-logo {
   position: absolute;
   top: 30px;
@@ -39,23 +30,17 @@
   max-width: 730px;
 }
 .header-title__text {
-  font-size: 120px;
-  font-weight: 600;
+  font-size: 102px;
   line-height: 96px;
-  display: inline-block;
-}
-.header__row {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.title_row_item {
-  position: relative;
-  margin: 0 0 0 64px;
-  z-index: 11;
 }
 .header-title__text::first-letter {
   text-transform: uppercase;
+}
+.title_row_item {
+  display: block;
+  position: relative;
+  margin: 0 0 0 64px;
+  z-index: 11;
 }
 .header__subtitle {
   max-width: 388px;
@@ -65,6 +50,7 @@
   z-index: 10;
 }
 .header-subtitle__text {
+  margin: 0;
   font-size: 18px;
   line-height: 25px;
 }
@@ -80,18 +66,26 @@
   right: 0;
   z-index: 2;
 }
-
 .header__main_img_illustration {
   width: 765px;
   height: 608px;
 }
+.header__square-pic {
+  height: 568px;
+  width: 568px;
+  background-color: #2f80ed;
+  position: absolute;
+  right: 0;
+  top: 64px;
+  z-index: 1;
+}
+
+/* header end */
 
 .logo {
   width: 228px;
   height: 32px;
 }
-
-/* header end */
 
 /* description */
 
@@ -112,22 +106,21 @@
   min-width: 784px;
   width: 80%;
 }
+.description__sub-title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #2f80ed;
+  font-weight: normal;
+}
 .two-columns__paragraph {
   margin: 0;
 }
-
 .paragraph-margen {
   margin: 0 0 30px 0;
 }
 .two-columns__span-accent {
   font-weight: 600;
-}
-
-.description__sub-title {
-  font-size: 18px;
-  line-height: 1.2;
-  color: #2f80ed;
-  font-weight: normal;
 }
 
 /* description end */
@@ -137,13 +130,10 @@
 .digits {
   padding: 100px 0;
 }
-.digits__title {
-}
 .section-title {
   text-align: center;
   line-height: 1.15;
   font-size: 60px;
-  font-weight: 600;
   margin: 0;
 }
 .section-subtitle {
@@ -165,13 +155,10 @@
   width: 250px;
   margin: 60px 0 0 0;
 }
-.table-row__item {
-}
 .table-cell__heading {
   margin: 0;
   line-height: 1.15;
   font-size: 24px;
-  font-weight: 600;
 }
 .table-cell__text {
   margin: 20px 0 0 0;
@@ -192,36 +179,40 @@
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 867px 637px;
-  min-height: 737px;
+  min-height: 787px;
   text-align: center;
   position: relative;
-  min-height: 737px;
 }
 .feynman-title {
   margin: 0;
   text-align: center;
   width: 648px;
+  display: inline-block;
+}
+.feynman-title__text {
   font-size: 120px;
   line-height: 1.15;
-  font-weight: 600;
-  display: inline-block;
 }
 .feynman-subtitle {
   display: block;
   margin: 70px 0 0 0;
+}
+.feynman-subtitle__text {
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
 }
 .feynman-link {
-  text-decoration: none;
-  font-size: 36px;
-  line-height: 51px;
-  color: #2f80ed;
   display: inline-block;
   position: absolute;
   right: 48px;
   top: 50%;
+}
+.feynman-link__text {
+  text-decoration: none;
+  font-size: 36px;
+  line-height: 51px;
+  color: #2f80ed;
 }
 
 /* feyunman end */
@@ -233,9 +224,7 @@
   background-color: #1f1f1f;
   position: relative;
   overflow: hidden;
-  z-index: 5;
 }
-
 .kaufman-triangle {
   position: absolute;
   width: 877px;
@@ -244,9 +233,10 @@
   right: -220px;
   z-index: 1;
 }
-
 .digits__title_theme_dark {
   color: #f2f2f2;
+  position: relative;
+  z-index: 3;
 }
 .table__cell_theme_dark {
   width: 200px;
@@ -254,27 +244,8 @@
   color: #f2f2f2;
   z-index: 3;
 }
-.table-cell__heading_theme_dark {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: 600;
-}
-.table-cell__text_theme_dark {
-  margin: 20px 0 0 0;
-  line-height: 1.2;
-  font-size: 18px;
-}
+
 /* kaufman emd */
-/* и элемента с модификатором вида ключ-значение */
-/*
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
-*/
 
 /*footer */
 
@@ -297,16 +268,15 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.footer-columns_logo_copyright {
-}
-
 .footer-columns_autor_copyright {
   font-size: 18px;
   line-height: 25px;
 }
-
 .footer-columns__info {
 }
+.footer-columns__social {
+}
+
 .footer-columns__heading {
   text-align: left;
 }
@@ -318,9 +288,6 @@
 .footer-column__row {
 }
 .column-links {
-}
-
-.footer-columns__social {
 }
 .column-link {
 }
