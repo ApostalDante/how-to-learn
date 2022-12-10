@@ -8,6 +8,8 @@
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: "Helvetica Neue", "Arial", sans-serif;
 }
+.content {
+}
 .logo {
   width: 228px;
   height: 32px;
@@ -22,13 +24,10 @@
   min-height: 600px;
   max-height: 756px;
   background-color: #f2f2f2;
-}
-.header__row {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  height: 100%;
 }
 .logo_place_header {
   position: absolute;
@@ -92,6 +91,7 @@
   margin: 0;
   font-size: 18px;
   line-height: 1.2;
+  font-weight: normal;
   color: #2f80ed;
 }
 .two-columns__main-text {
@@ -135,6 +135,7 @@
 .table {
   width: 1100px;
   margin: 0 auto;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -202,7 +203,7 @@
   position: relative;
   overflow: hidden;
 }
-.kaufman-triangle {
+.kaufman__triangle {
   background-image: url("../images/kaufman-triangle.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -214,7 +215,7 @@
   right: -220px;
   z-index: 1;
 }
-.kaufman_theme_dark {
+.table_theme_dark {
   color: #f2f2f2;
   z-index: 3;
   position: relative;
@@ -223,7 +224,14 @@
   width: 200px;
   margin: 80px 0 0 0;
 }
-
+.section-title_theme_dark {
+  color: #f2f2f2;
+  z-index: 3;
+  position: relative;
+}
+.section-subtitle_theme_dark {
+  color: #f2f2f2;
+}
 /* kaufman emd */
 
 /*footer */
@@ -249,6 +257,8 @@
   justify-content: space-between;
 }
 .logo_place_footer {
+}
+.footer__column {
 }
 .footer__autor {
   font-size: 18px;
