@@ -1,6 +1,6 @@
 .resources__logo {
   width: 270px;
   max-height: 38px;
-  object-fit: scale-down;
+  object-fit: contain;
   object-position: 50% 50%;
 }
